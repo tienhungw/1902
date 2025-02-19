@@ -21,6 +21,7 @@
             <div class="flex border border-r-black rounded-3xl w-120 h-12 mt-2 justify-between">
                 <button class="h-12">
                     <input class="ml-4" type="text" placeholder="Tìm kiếm">
+                    <!-- <box-icon type='solid' name='keyboard'></box-icon> -->
                 </button>
                 <button class="mr-4 h-12">
                     <box-icon class="border-r w-8 h-8 pr-2 opacity-[60%]" type='solid' name='keyboard'></box-icon>
@@ -40,7 +41,7 @@
             <button class="">
                 <box-icon name='bell'></box-icon>
             </button>
-            <img src="./src/avt.jpg" class="w-10 h-10 rounded-[999px] mt-2 mr-2" alt="">
+            <img src="/src/avt.jpg" class="w-10 h-10 rounded-[999px] mt-2 mr-2" alt="">
         </div>
     </nav>
 
@@ -48,15 +49,15 @@
         <div class="menu flex flex-col gap-2">
             <button class="flex icon gap-2">
                 <box-icon type='solid' name='home'></box-icon>
-                <a href="/" data-link>Trang chủ</a>
+                <a href="/" data-navigo>Trang chủ</a>
             </button>
             <button class="flex icon gap-2">
                 <box-icon type='solid' name='zap'></box-icon>
-                <a href="/shorts" data-link>Shorts</a>
+                <a href="/shorts" data-navigo>Shorts</a>
             </button>
             <button class="flex icon gap-2">
                 <box-icon type='solid' name='videos'></box-icon>
-                <a href="/feed" data-link>Kênh đăng kí</a>
+                <a href="/feed" data-navigo>Kênh đăng kí</a>
             </button>
         </div>
     </div>
@@ -71,15 +72,13 @@
 
 
     
-    <script src="/src/main.js" type="module"></script>
+    <script type="module" src="./src/main.js"></script>
 
     <script>
         const scrollToTopBtn = document.getElementById("cuon");
         scrollToTopBtn.addEventListener("click", function () {
             window.scrollTo({ top: 0, behavior: "smooth" });
         });
-
-        
     </script>
 </body>
 </html>
