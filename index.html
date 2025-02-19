@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <title>Youtube</title>
+</head>
+<body>
+    <nav class="flex border border-black w-[100vw] h-[70px] justify-between">
+        <div class="flex mr-5 mt-1">
+            <box-icon class="w-10 h-10 mr-4 mt-1 ml-2" name='menu'></box-icon>
+            <box-icon class="w-12 h-12 mr-2" name='youtube' type='logo' color='#f90707' ></box-icon>
+            <p class="font-normal text-3xl mt-1">Premium</p>
+            <p class="text-xs">VN</p>
+        </div>
+    
+        <div class="flex">
+            <div class="flex border border-r-black rounded-3xl w-120 h-12 mt-2 justify-between">
+                <button class="h-12">
+                    <input class="ml-4" type="text" placeholder="Tìm kiếm">
+                </button>
+                <button class="mr-4 h-12">
+                    <box-icon class="border-r w-8 h-8 pr-2 opacity-[60%]" type='solid' name='keyboard'></box-icon>
+                    <box-icon class="w-[25px] h-[25px] mb-1" name='search-alt-2' ></box-icon>
+                </button>
+            </div>
+            <button class="ml-2 mt-2">
+                <box-icon type='solid' name='microphone'></box-icon>
+            </button>
+        </div>
+
+        <div class="flex mr-10 gap-2">
+            <button class="flex mt-3 mr-2 border border-black h-[35px] w-[70px] rounded-3xl bg-gray-200">
+                <box-icon class="mt-[2px]" name='plus'></box-icon>
+                <p class="text-xl">Tạo</p>
+            </button>
+            <button class="">
+                <box-icon name='bell'></box-icon>
+            </button>
+            <img src="./src/avt.jpg" class="w-10 h-10 rounded-[999px] mt-2 mr-2" alt="">
+        </div>
+    </nav>
+
+    <div class="sidebar w-[150px] h-[100vh] border border-black">
+        <div class="menu flex flex-col gap-2">
+            <button class="flex icon gap-2">
+                <box-icon type='solid' name='home'></box-icon>
+                <a href="/" data-link>Trang chủ</a>
+            </button>
+            <button class="flex icon gap-2">
+                <box-icon type='solid' name='zap'></box-icon>
+                <a href="/shorts" data-link>Shorts</a>
+            </button>
+            <button class="flex icon gap-2">
+                <box-icon type='solid' name='videos'></box-icon>
+                <a href="/feed" data-link>Kênh đăng kí</a>
+            </button>
+        </div>
+    </div>
+    
+    <div class="absolute top-[80px] left-[180px]" id="content"></div>
+
+    <div class="scroll fixed top-[50%] right-[1%]">
+        <button id="cuon" class=" cursor-pointer">
+            <box-icon type='solid' name='caret-up-circle'></box-icon>
+        </button>
+    </div>
+
+
+    
+    <script src="/src/main.js" type="module"></script>
+
+    <script>
+        const scrollToTopBtn = document.getElementById("cuon");
+        scrollToTopBtn.addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+        
+    </script>
+</body>
+</html>
